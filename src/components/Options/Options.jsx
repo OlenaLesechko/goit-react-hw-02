@@ -6,13 +6,13 @@ const Options = ({ onClick, feedbackOptions, resetFeedback, totalFeedback }) => 
     return (
         <div className={css.options}>
         {Object.entries(feedbackOptions).map(([key]) => (
-            <button name={key} key={key} onClick={onClick}>
+            <button className={css.optionsButton} name={key} key={key} onClick={onClick}>
             {capitalize(key)}
             </button>
         ))}
         {totalFeedback != 0 && <button onClick={resetFeedback}>Reset</button>}
         </div>
     );
-    };
+};
 
 export default Options;
